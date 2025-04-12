@@ -1,4 +1,4 @@
-//Solution for Missing number
+//Optimal Solution for Missing number
 class Solution {
     public int missingNumber(int[] nums) {
         int n=nums.length;
@@ -12,3 +12,20 @@ class Solution {
     }
 }
 
+//Brute force solution
+ public static int missingNumber(int[] nums) {
+        int n = nums.length;
+        for (int i = 0; i <= n; i++) {
+            boolean f = false;
+            for (int j = 0; j < n; j++) {
+                if (nums[j] == i) {
+                    f = true;
+                    break;
+                }
+            }
+            if (f==false) {
+                return i;
+            }
+        }
+        return -1;
+    }

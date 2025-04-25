@@ -22,6 +22,7 @@ class Solution {
                     f = true;
                     break;
                 }
+                
             }
             if (f==false) {
                 return i;

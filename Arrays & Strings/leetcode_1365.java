@@ -35,7 +35,6 @@ class Solution {
             else
                 res[i] = count[nums[i] - 1];
         }
-
         return res;
     }
 }

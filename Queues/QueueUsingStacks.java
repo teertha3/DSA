@@ -14,26 +14,24 @@ public class Solution {
                     s1.push(x);
             break;
             case 2: if(s2.isEmpty()){
-            while(!s1.isEmpty()){
-                s2.push(s1.pop());
-            }
-            
-        }
-        if(!s2.isEmpty()){
-               s2.pop();
-        }
-        
+                          while(!s1.isEmpty()){
+                                 s2.push(s1.pop());
+                            }
+                   
+                     }
+                      if(!s2.isEmpty()){
+                             s2.pop();
+                      }
             break;
             case 3: 
-            if(s2.isEmpty()){
-                while(!s1.isEmpty()){
-                    s2.push(s1.pop());
-                }
-            }
-            if(!s2.isEmpty()){
-                System.out.println(s2.peek());
-            }
-            
+                   if(s2.isEmpty()){
+                       while(!s1.isEmpty()){
+                           s2.push(s1.pop());
+                       }
+                   }
+                   if(!s2.isEmpty()){
+                       System.out.println(s2.peek());
+                   }
             break;
         }
        }

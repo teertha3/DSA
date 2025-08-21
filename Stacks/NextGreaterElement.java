@@ -28,7 +28,6 @@ class Solution {
             }
             if(st.isEmpty()){
                 res.add(-1);
-                st.push(arr[i]);
             }
             else{
                 res.add(st.peek());

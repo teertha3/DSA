@@ -31,6 +31,7 @@ class Solution {
             }
 
         }
+        if(j==-1) return;
         for(int i=j+1;i<n;i++){
             if(nums[i]!=0){
                 int temp=nums[i];

@@ -20,7 +20,7 @@ class Solution {
 
             }
             //if right is sorted
-            if(nums.get(mid)<=nums.get(high)){
+            else{
                 if(nums.get(mid)<ans){
                     ans=nums.get(mid);
                     ind=mid;

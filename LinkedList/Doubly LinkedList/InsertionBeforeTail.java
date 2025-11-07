@@ -26,10 +26,16 @@ class ListNode {
 
 class Solution {
     public ListNode insertBeforeTail(ListNode head, int X) {
+        ListNode newNode=new ListNode(X);
         if(head==null){
             return newNode;
         }
-        ListNode newNode=new ListNode(X);
+        if(head.next==null){
+            newNode.next=head;
+            head.prev=newNode;
+            head=newNode;
+            return head;
+        }
         ListNode tail=head;
         while(tail.next!=null){
             tail=tail.next;

@@ -37,3 +37,28 @@ class ListNode {
         return 0;
      }
  }
+//optimal
+class Solution {
+     public int findLengthOfLoop(ListNode head) {
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                return lenofLL(slow,fast);
+            }
+        }
+        return 0;
+     }
+     public static int lenofLL(ListNode slow,ListNode fast){
+        int c=1;
+        fast=fast.next;
+        while(slow!=fast){
+            c++;
+            fast=fast.next;
+        }
+        return c;
+     }
+ }
+

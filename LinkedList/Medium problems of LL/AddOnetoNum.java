@@ -60,3 +60,27 @@ class Solution {
         return prev;
     }
 }
+//optimal using recursion
+class Solution {
+    public ListNode addOne(ListNode head) {
+        int carry=helperFun(head);
+        if(carry==1){
+            ListNode newNode= new ListNode(1);
+            newNode.next=head;
+            return newNode;
+        }
+        return head;
+    }
+    public int helperFun(ListNode temp){
+        if(temp==null){
+            return 1;
+        }
+        int carry=helperFun(temp.next);
+        temp.val=temp.val+carry;
+        if(temp.val<10){
+            return 0;
+        }
+        temp.val=0;
+        return 1;
+    }
+}

@@ -42,3 +42,33 @@ class Solution {
         }
     }
 }
+
+(or)
+class Solution {
+    public void moveZeroes(int[] arr) {
+        int n=arr.length;
+        int l=-1;
+        for(int i=0;i<n;i++){
+            if(arr[i]==0){
+                l=i;
+                break;
+            }
+        }
+        if(l==-1){
+            return;
+        }
+        int r=l+1;
+        while(r<n){
+            if(arr[l]==0 && arr[r]!=0){
+                int temp=arr[r];
+                arr[r]=arr[l];
+                arr[l]=temp;
+                l++;
+                r++;
+            }
+            else{
+                r++;
+            }
+        }
+    }
+}
